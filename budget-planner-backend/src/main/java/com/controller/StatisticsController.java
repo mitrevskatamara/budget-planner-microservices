@@ -25,27 +25,27 @@ public class StatisticsController {
 
     private final UserService userService;
 
-    @Operation(summary = "Endpoint to get number of expenses/incomes by year")
-    @PostMapping("/byYear")
-    public ResponseEntity<List<StatisticsDto>> getStatisticsByYear(@RequestBody FilterDto filterDto) {
+    @Operation(summary = "Endpoint to get number and sum of expenses/incomes by month and year")
+    @PostMapping("/totalSumAndNumber")
+    public ResponseEntity<List<StatisticsDto>> getNumberAndSumOfTransactionsByMonthAndYear(@RequestBody FilterDto filterDto) {
         User user = this.userService.findByUsername(filterDto.getUsername());
-        List<StatisticsDto> list = this.statisticsService.getStatisticsByYear(user, filterDto.getYear());
+        List<StatisticsDto> list = this.statisticsService.getNumberAndSumOfTransactionsByMonthAndYear(user, filterDto.getYear());
 
         return new ResponseEntity<>(list, HttpStatus.OK);
     }
 
-    @Operation(summary = "Endpoint to get total sum of expenses/incomes by year")
-    @PostMapping("/total")
-    public ResponseEntity<StatisticsDto> getTotalForSpecificYear(@RequestBody FilterDto filterDto) {
+    @Operation(summary = "Endpoint to get total sum of expenses/incomes by month and year")
+    @PostMapping("/totalSum")
+    public ResponseEntity<StatisticsDto> getTotalSumOfTransactionsByMonthAndYear(@RequestBody FilterDto filterDto) {
         User user = this.userService.findByUsername(filterDto.getUsername());
-        StatisticsDto statisticsDto = this.statisticsService.sumTotal(user, filterDto.getYear());
+        StatisticsDto statisticsDto = this.statisticsService.getTotalSumOfTransactionsByMonthAndYear(user, filterDto.getYear());
 
         return new ResponseEntity<>(statisticsDto, HttpStatus.OK);
     }
 
     @Operation(summary = "Endpoint to get percentage of expenses by category, month and year")
-    @PostMapping("/byCategory")
-    public ResponseEntity<List<Double>> getStatisticsForExpensesByCategory(@RequestBody StatisticsDto statisticsDto) {
+    @PostMapping("/percentageOfExpenses")
+    public ResponseEntity<List<Double>> getPercentagesOfExpensesByCategory(@RequestBody StatisticsDto statisticsDto) {
         User user = this.userService.findByUsername(statisticsDto.getUsername());
         List<Double> doubles = this.statisticsService.getStatisticsForExpensesByCategory(user, statisticsDto);
 
@@ -53,8 +53,8 @@ public class StatisticsController {
     }
 
     @Operation(summary = "Endpoint to get percentage of incomes by category, month and year")
-    @PostMapping("/incomesByCategory")
-    public ResponseEntity<List<Double>> getStatisticsForIncomesByCategory(@RequestBody StatisticsDto statisticsDto) {
+    @PostMapping("/percentageOfIncomes")
+    public ResponseEntity<List<Double>> getPercentagesOfIncomesByCategory(@RequestBody StatisticsDto statisticsDto) {
         User user = this.userService.findByUsername(statisticsDto.getUsername());
         List<Double> doubles = this.statisticsService.getStatisticsForIncomesByCategory(user, statisticsDto);
 
