@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="config-server" />
         <module name="open-exchange-rates" />
         <module name="notification-service" />
         <module name="budget-planner-backend" />
@@ -16,6 +17,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="budget-planner-backend" options="-parameters" />
+      <module name="config-server" options="-parameters" />
       <module name="notification-service" options="-parameters" />
       <module name="open-exchange-rates" options="-parameters" />
     </option>
