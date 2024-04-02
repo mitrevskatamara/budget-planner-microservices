@@ -11,7 +11,7 @@ public interface StatisticsService {
 
     List<Double> getStatisticsForIncomesByCategory(User user, StatisticsDto statisticsDto);
 
-    List<StatisticsDto> getStatisticsByYear(User user, int year);
+    List<StatisticsDto> getNumberAndSumOfTransactionsByMonthAndYear(User user, int year);
 
-    StatisticsDto sumTotal(User user, int year);
+    StatisticsDto getTotalSumOfTransactionsByMonthAndYear(User user, int year);
 }

@@ -75,7 +75,7 @@ public class StatisticsServiceImpl implements StatisticsService {
     }
 
     @Override
-    public List<StatisticsDto> getStatisticsByYear(User user, int year) {
+    public List<StatisticsDto> getNumberAndSumOfTransactionsByMonthAndYear(User user, int year) {
         List<StatisticsDto> listWithStatistics = new ArrayList<>();
 
         for (Month month : Month.values()) {
@@ -107,7 +107,7 @@ public class StatisticsServiceImpl implements StatisticsService {
     }
 
     @Override
-    public StatisticsDto sumTotal(User user, int year) {
+    public StatisticsDto getTotalSumOfTransactionsByMonthAndYear(User user, int year) {
         List<Transaction> transactions = this.transactionService.getTransactionsByType(user, Type.Expense);
         transactions = this.transactionService.getTransactionsByYear(transactions, year);
         Double expenseTotal = sum(transactions);
