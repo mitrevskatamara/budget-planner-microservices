@@ -1,0 +1,8 @@
+build:
+  version: "2.0"
+
+openExchangeRates:
+  message: "Welcome to Open exchange rates microservice related QA APIs"
+  contactDetails:
+    name: "John Doe - QA"
+    email: "johnqa@budgetplanner.com"

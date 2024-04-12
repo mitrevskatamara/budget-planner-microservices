@@ -1,0 +1,8 @@
+build:
+  version: "1.0"
+
+budgetPlanner:
+  message: "Welcome to Budget Planner microservice related prod APIs"
+  contactDetails:
+    name: "John Doe - Product Owner"
+    email: "johnprod@budgetplanner.com"

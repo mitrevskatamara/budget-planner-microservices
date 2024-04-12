@@ -1,0 +1,8 @@
+build:
+  version: "2.0"
+
+budgetPlanner:
+  message: "Welcome to Budget Planner microservice related QA APIs"
+  contactDetails:
+    name: "John Doe - QA"
+    email: "johnqa@budgetplanner.com"

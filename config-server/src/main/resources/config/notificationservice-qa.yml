@@ -1,0 +1,8 @@
+build:
+  version: "2.0"
+
+notificationService:
+  message: "Welcome to Notification service microservice related QA APIs"
+  contactDetails:
+    name: "John Doe - QA"
+    email: "johnqa@budgetplanner.com"

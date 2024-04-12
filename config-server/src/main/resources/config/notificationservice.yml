@@ -1,0 +1,8 @@
+build:
+  version: "3.0"
+
+notificationService:
+  message: "Welcome to Notification service microservice related local APIs"
+  contactDetails:
+    name: "John Doe - Developer"
+    email: "johndev@budgetplanner.com"
