@@ -1,0 +1,8 @@
+build:
+  version: "1.0"
+
+openExchangeRates:
+  message: "Welcome to Open exchange rates microservice related prod APIs"
+  contactDetails:
+    name: "John Doe - Product Owner"
+    email: "johnprod@budgetplanner.com"

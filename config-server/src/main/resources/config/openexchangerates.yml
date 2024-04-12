@@ -1,0 +1,8 @@
+build:
+  version: "3.0"
+
+openExchangeRates:
+  message: "Welcome to Open exchange rates microservice related local APIs"
+  contactDetails:
+    name: "John Doe - Developer"
+    email: "johndev@budgetplanner.com"

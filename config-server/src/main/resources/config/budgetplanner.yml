@@ -1,0 +1,8 @@
+build:
+  version: "3.0"
+
+budgetPlanner:
+  message: "Welcome to Budget Planner microservice related local APIs"
+  contactDetails:
+    name: "John Doe - Developer"
+    email: "johndev@budgetplanner.com"
